@@ -35,21 +35,12 @@ export const metadata: Metadata = {
     title: 'DownX — Download X (Twitter) Videos in HD',
     description:
       'Paste any X video or live stream link and download it in high quality. Free, fast, no sign-up. Works on all devices.',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'DownX — Download X (Twitter) videos in HD',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'DownX — Download X (Twitter) Videos in HD',
     description:
       'Free tool to download X videos and live streams in multiple qualities.',
-    images: ['/og-image.png'],
   },
 };
 

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description:
       'Save X videos, GIFs and live streams on iPhone, Android and PC. Free and no sign-up.',
     url: '/guide',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630 }],
   },
 };
 

@@ -116,7 +116,7 @@ lib/
   xExtract.ts           # منطق استخراج روابط الفيديو والبثوث
   site.ts               # عنوان الموقع (للـ SEO)
 public/
-  og-image.png          # صورة المشاركة (Open Graph 1200×630)
+  app/opengraph-image.tsx   # صورة المشاركة الديناميكية (Open Graph 1200×630)
 ```
 
 ## كيف يعمل الاستخراج؟
