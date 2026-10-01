@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #05070f;
+  color: #e2e8f0;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #6366f1;
+  color: #fff;
+}
+
+/* Gradient headline text */
+.text-gradient {
+  background: linear-gradient(100deg, #67e8f9 0%, #818cf8 45%, #c084fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Frosted glass card */
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.glass-strong {
+  background: rgba(13, 17, 32, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Subtle grid backdrop */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 30%, transparent 75%);
+}
+
+/* Floating ambient blobs */
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, -30px) scale(1.08); }
+}
+.blob {
+  animation: drift 14s ease-in-out infinite;
+  filter: blur(90px);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Gradient primary button */
+.btn-gradient {
+  background: linear-gradient(100deg, #0ea5e9 0%, #6366f1 60%, #a855f7 100%);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  box-shadow: 0 8px 30px -8px rgba(99, 102, 241, 0.6);
+}
+.btn-gradient:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 10px 36px -8px rgba(99, 102, 241, 0.8);
+}
+.btn-gradient:active {
+  transform: scale(0.98);
+}
+
+/* Loading spinner */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.spinner {
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 9999px;
+  border: 3px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  animation: spin 0.8s linear infinite;
+}
+
+/* FAQ accordion */
+details.faq summary {
+  list-style: none;
+  cursor: pointer;
+}
+details.faq summary::-webkit-details-marker {
+  display: none;
+}
+details.faq summary .chev {
+  transition: transform 0.25s ease;
+}
+details.faq[open] summary .chev {
+  transform: rotate(180deg);
+}
+details.faq .faq-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+details.faq[open] .faq-body {
+  grid-template-rows: 1fr;
+}
+details.faq .faq-inner {
+  overflow: hidden;
+}
+
+/* Card hover lift */
+.lift {
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+.lift:hover {
+  transform: translateY(-4px);
+  border-color: rgba(129, 140, 248, 0.35);
+}
